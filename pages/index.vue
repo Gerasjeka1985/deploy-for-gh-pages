@@ -26,7 +26,7 @@ import {ref} from 'vue';
   color: aliceblue;
   width: 100%;
   height: 100vh;
-  background-image: url("@/assets/images/fdfe5baa-657f-44da-84cb-7f3e4ace13a4_1.jpg");
+  background-image: url("https://bipbap.ru/wp-content/uploads/2017/08/8f878ea0803189dcd4867928ffaf1eb9_L.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
