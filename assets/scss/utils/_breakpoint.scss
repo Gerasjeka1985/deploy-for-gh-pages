@@ -1,0 +1,9 @@
+@use 'sass:map';
+
+@import '../settings/breakpoints';
+
+@mixin breakpoint($size) {
+  @media screen and (min-width: #{map.get($breakpoint-sizes, $size)}px) {
+    @content;
+  }
+}

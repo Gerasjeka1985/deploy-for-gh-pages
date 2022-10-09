@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import Main from "~/components/templates/MainPage.vue";
+  import About from "~/components/templates/About.vue";
 </script>
 
 <template>
-  <div class="main">
-   <Main />
+  <div class="about">
+    <about />
   </div>
 </template>
 
