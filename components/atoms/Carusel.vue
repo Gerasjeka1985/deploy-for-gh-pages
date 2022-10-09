@@ -20,14 +20,14 @@ import {ref} from 'vue';
   ]
 
   function prev() {
-    if(index.value < 0){
+    if(index.value == 0){
       return index.value;
     }
       return index.value--;
   }
 
   function next() {
-    if (index.value > arr.length){
+    if (index.value == arr.length - 1){
       return index.value;
     }
     return index.value++;
@@ -38,12 +38,12 @@ import {ref} from 'vue';
 <template>
   <div class="wrapper">
     <div class="wrapper__carusel">
-      <img :src="arr[index].img" aly="image" />
+      <img :src="arr[index].img" alt="image" />
     </div>
   </div>
   <div class="wrapper__btns">
-    <button @click="prev">Prev</button>
-    <button @click="next">Next</button>
+    <button @click.prevent="prev">Prev</button>
+    <button @click.prevent="next">Next</button>
   </div>
 </template>
 
@@ -70,13 +70,15 @@ import {ref} from 'vue';
       width: 100%;
       height: 50px;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
+
 
       & button {
         cursor: pointer;
         background:$color-primary-blue;
         padding: 7px 10px;
+        margin: 10px;
         border-radius: 10px;
         color:$color-primary-white;
       }
@@ -85,7 +87,17 @@ import {ref} from 'vue';
 
   @include breakpoint(large) {
    .wrapper{
-     
+     height: 500px;
+
+     &__carusel{
+       width: 400px;
+       height: 400px;
+
+       & img{
+         width: 100%;
+         height: 100%;
+       }
+     }
    }
   }
 </style>
